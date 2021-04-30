@@ -1,0 +1,61 @@
+{
+    "name": "jxckaroo/laravel-service-repository",
+    "description": "Reusable classes which do the usual boring stuff in the service design pattern, so that you can focus building something cool ;)",
+    "keywords": [
+        "laravel",
+        "service",
+        "repository",
+        "laravel-service-repository",
+        "service repository",
+        "laravel-service-repository",
+        "design pattern"
+    ],
+    "license": "MIT",
+    "authors": [{
+        "name": "Jack Mollart",
+        "email": "jack@javeloper.co.uk"
+    }],
+    "require": {
+        "php": ">=7.2",
+        "illuminate/database": "^5.0 || ^6.0 || ^7.0 || ^8.0",
+        "illuminate/support": "^5.0 || ^6.0 || ^7.0 || ^8.0"
+    },
+    "require-dev": {
+        "brianium/paratest": "^6.2",
+        "nunomaduro/collision": "^5.3",
+        "orchestra/testbench": "^6.15",
+        "phpunit/phpunit": "^9.3",
+        "spatie/laravel-ray": "^1.9",
+        "vimeo/psalm": "^4.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Jxckaroo\\LaravelServiceRepository\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Jxckaroo\\LaravelServiceRepository\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "psalm": "vendor/bin/psalm",
+        "test": "./vendor/bin/testbench package:test --parallel --no-coverage",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Jxckaroo\\LaravelServiceRepository\\LaravelServiceRepositoryServiceProvider"
+            ],
+            "aliases": {
+                "LaravelServiceRepository": "Jxckaroo\\LaravelServiceRepository\\LaravelServiceRepositoryFacade"
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
