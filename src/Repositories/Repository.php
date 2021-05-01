@@ -43,6 +43,9 @@ abstract class Repository implements RepositoryInterface
             throw new InvalidModelException("Repository model cannot be null. Have you remembered to set \$model on your repository?");
         }
 
+        /**
+         * @psalm-suppress all
+         */
         $this->model = resolve($this->model);
 
         if ($this->model instanceof Model) {
