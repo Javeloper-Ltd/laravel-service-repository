@@ -1,7 +1,9 @@
 # Laravel Service Repository
 
+[![GitHub license](https://img.shields.io/github/license/Jxckaroo/laravel-service-repository.svg)](https://github.com/Jxckaroo/laravel-service-repository/blob/main/LICENSE.md)
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/jxckaroo/laravel-service-repository.svg?style=flat-square)](https://packagist.org/packages/jxckaroo/laravel-service-repository)
 [![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/jxckaroo/laravel-service-repository/run-tests?label=tests)](https://github.com/jxckaroo/laravel-service-repository/actions?query=workflow%3Arun-tests+branch%3Amain)
+[![GitHub Psalm Action Status](https://img.shields.io/github/workflow/status/jxckaroo/laravel-service-repository/Psalm?label=psalm%20build)](https://github.com/jxckaroo/laravel-service-repository/actions?query=workflow%3Apsalm+branch%3Amain)
 [![GitHub Code Style Action Status](https://img.shields.io/github/workflow/status/jxckaroo/laravel-service-repository/Check%20&%20fix%20styling?label=code%20style)](https://github.com/jxckaroo/laravel-service-repository/actions?query=workflow%3A"Check+%26+fix+styling"+branch%3Amain)
 [![Total Downloads](https://img.shields.io/packagist/dt/jxckaroo/laravel-service-repository.svg?style=flat-square)](https://packagist.org/packages/jxckaroo/laravel-service-repository)
 
