@@ -5,7 +5,7 @@ namespace Jxckaroo\LaravelServiceRepository\Services;
 use Jxckaroo\LaravelServiceRepository\Services\Interfaces\ServiceInterface;
 
 /**
- * class Service
+ * Class Service
  * @package Jxckaroo\LaravelServiceRepository\Services
  */
 abstract class Service implements ServiceInterface
