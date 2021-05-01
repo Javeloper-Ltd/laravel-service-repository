@@ -8,6 +8,6 @@ use Jxckaroo\LaravelServiceRepository\Services\Interfaces\ServiceInterface;
  * class Service
  * @package Jxckaroo\LaravelServiceRepository\Services
  */
-class Service implements ServiceInterface
+abstract class Service implements ServiceInterface
 {
 }

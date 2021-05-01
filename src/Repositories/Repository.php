@@ -8,6 +8,6 @@ use Jxckaroo\LaravelServiceRepository\Repositories\Interfaces\RepositoryInterfac
  * class Repository
  * @package Jxckaroo\LaravelServiceRepository\Repositories
  */
-class Repository implements RepositoryInterface
+abstract class Repository implements RepositoryInterface
 {
 }
