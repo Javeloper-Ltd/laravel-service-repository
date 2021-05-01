@@ -4,7 +4,7 @@ namespace Jxckaroo\LaravelServiceRepository\Tests;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use JXckaroo\LaravelServiceRepository\LaravelServiceRepositoryServiceProvider;
+use Jxckaroo\LaravelServiceRepository\LaravelServiceRepositoryServiceProvider;
 
 class TestCase extends Orchestra
 {
