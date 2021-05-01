@@ -13,7 +13,7 @@ use Jxckaroo\LaravelServiceRepository\Repositories\Interfaces\RepositoryInterfac
 abstract class Repository implements RepositoryInterface
 {
     /**
-     * @var Model $model
+     * @var Model
      */
     protected $model;
 
