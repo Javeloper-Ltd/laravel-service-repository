@@ -5,6 +5,7 @@ namespace Jxckaroo\LaravelServiceRepository\Repositories;
 use Illuminate\Database\Eloquent\Model;
 use Jxckaroo\LaravelServiceRepository\Exceptions\Repositories\InvalidModelException;
 use Jxckaroo\LaravelServiceRepository\Repositories\Interfaces\RepositoryInterface;
+use Jxckaroo\LaravelServiceRepository\Traits\ModelCrudActions;
 
 /**
  * Class Repository
@@ -12,6 +13,8 @@ use Jxckaroo\LaravelServiceRepository\Repositories\Interfaces\RepositoryInterfac
  */
 abstract class Repository implements RepositoryInterface
 {
+    use ModelCrudActions;
+
     /**
      * @var Model
      */
@@ -37,7 +40,7 @@ abstract class Repository implements RepositoryInterface
     /**
      * @throws InvalidModelException
      */
-    public function resolveCorrectModel()
+    protected function resolveCorrectModel()
     {
         if (is_null($this->model)) {
             throw new InvalidModelException("Repository model cannot be null. Have you remembered to set \$model on your repository?");
@@ -48,7 +51,7 @@ abstract class Repository implements RepositoryInterface
          */
         $this->model = resolve($this->model);
 
-        if ($this->model instanceof Model) {
+        if (!$this->model instanceof Model) {
             throw new InvalidModelException("Repository model must be an instance of Illuminate\Database\Eloquent\Model.");
         }
     }
