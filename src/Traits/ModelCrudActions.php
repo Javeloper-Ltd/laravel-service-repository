@@ -13,12 +13,12 @@ use Illuminate\Support\Collection;
 trait ModelCrudActions
 {
     /**
-     * @var array $activeWith
+     * @var array
      */
     protected $activeWith = [];
 
     /**
-     * @var array $activeWithCount
+     * @var array
      */
     protected $activeWithCount = [];
 
@@ -46,6 +46,7 @@ trait ModelCrudActions
     public function with(array $with)
     {
         $this->activeWith = $with;
+
         return $this;
     }
 
@@ -56,6 +57,7 @@ trait ModelCrudActions
     public function withCount(array $withCount)
     {
         $this->activeWithCount = $withCount;
+
         return $this;
     }
 
