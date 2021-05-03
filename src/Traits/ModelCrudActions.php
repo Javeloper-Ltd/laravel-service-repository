@@ -23,9 +23,9 @@ trait ModelCrudActions
     protected $activeWithCount = [];
 
     /**
-     * @return Collection
+     * @return Builder[]|\Illuminate\Database\Eloquent\Collection
      */
-    public function getAll(): Collection
+    public function getAll()
     {
         return $this->buildQuery()->get();
     }
