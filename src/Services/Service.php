@@ -10,4 +10,25 @@ use Jxckaroo\LaravelServiceRepository\Services\Interfaces\ServiceInterface;
  */
 abstract class Service implements ServiceInterface
 {
+    /**
+     * @var array $repositories
+     */
+    protected $repositories;
+
+    /**
+     * Service constructor.
+     */
+    public function __construct()
+    {
+        $this->resolveRepositories();
+    }
+
+    protected function resolveRepositories()
+    {
+        foreach ($this->repositories as $repo) {
+            $stringParts = explode('\\', $repo);
+            $string = lcfirst(end($stringParts));
+            $this->{$string} = resolve($repo);
+        }
+    }
 }
