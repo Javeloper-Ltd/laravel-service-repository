@@ -5,7 +5,6 @@ namespace Jxckaroo\LaravelServiceRepository\Repositories\Interfaces;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Jxckaroo\LaravelServiceRepository\Exceptions\Repositories\InvalidModelException;
-use Jxckaroo\LaravelServiceRepository\Traits\ModelCrudActions;
 
 /**
  * Interface IRepository
