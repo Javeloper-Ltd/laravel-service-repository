@@ -12,7 +12,7 @@ use Jxckaroo\LaravelServiceRepository\Services\Interfaces\ServiceInterface;
 abstract class Service implements ServiceInterface
 {
     /**
-     * @var array $repositories
+     * @var array
      */
     protected $repositories;
 
