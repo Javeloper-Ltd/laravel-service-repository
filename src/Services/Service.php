@@ -3,13 +3,13 @@
 namespace Jxckaroo\LaravelServiceRepository\Services;
 
 use Jxckaroo\LaravelServiceRepository\Exceptions\Services\DuplicateRepositoriesException;
-use Jxckaroo\LaravelServiceRepository\Services\Interfaces\ServiceInterface;
+use Jxckaroo\LaravelServiceRepository\Services\Interfaces\IService;
 
 /**
  * Class Service
  * @package Jxckaroo\LaravelServiceRepository\Services
  */
-abstract class Service implements ServiceInterface
+abstract class Service implements IService
 {
     /**
      * @var array
@@ -27,7 +27,7 @@ abstract class Service implements ServiceInterface
     /**
      * @throws DuplicateRepositoriesException
      */
-    protected function resolveRepositories()
+    public function resolveRepositories()
     {
         foreach ($this->repositories as $repo) {
             $stringParts = explode('\\', $repo);
