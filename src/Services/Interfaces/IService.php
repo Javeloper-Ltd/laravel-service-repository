@@ -14,4 +14,9 @@ interface IService
      * @throws DuplicateRepositoriesException
      */
     public function resolveRepositories();
+
+    /**
+     * @return array
+     */
+    public function getActiveRepositories(): array;
 }

@@ -16,9 +16,9 @@ abstract class Repository implements IRepository
     use ModelCrudActions;
 
     /**
-     * @var Model
+     * @var Model $model
      */
-    protected $model;
+    protected Model $model;
 
     /**
      * Repository constructor.

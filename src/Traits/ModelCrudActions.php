@@ -12,14 +12,14 @@ use Illuminate\Database\Eloquent\Model;
 trait ModelCrudActions
 {
     /**
-     * @var array
+     * @var array $activeWith
      */
-    protected $activeWith = [];
+    protected array $activeWith = [];
 
     /**
-     * @var array
+     * @var array $activeWithCount
      */
-    protected $activeWithCount = [];
+    protected array $activeWithCount = [];
 
     /**
      * @return Builder[]|\Illuminate\Database\Eloquent\Collection
@@ -45,7 +45,6 @@ trait ModelCrudActions
     public function with(array $with)
     {
         $this->activeWith = $with;
-
         return $this;
     }
 
@@ -56,7 +55,6 @@ trait ModelCrudActions
     public function withCount(array $withCount)
     {
         $this->activeWithCount = $withCount;
-
         return $this;
     }
 

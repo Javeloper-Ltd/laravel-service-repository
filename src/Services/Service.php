@@ -12,9 +12,14 @@ use Jxckaroo\LaravelServiceRepository\Services\Interfaces\IService;
 abstract class Service implements IService
 {
     /**
-     * @var array
+     * @var array $repositories
      */
-    protected $repositories;
+    protected array $repositories;
+
+    /**
+     * @var array $repositoryMap
+     */
+    public array $repositoryMap;
 
     /**
      * Service constructor.
@@ -38,6 +43,16 @@ abstract class Service implements IService
             }
 
             $this->{$string} = resolve($repo);
+
+            $this->repositoryMap[$repo] = $string;
         }
+    }
+
+    /**
+     * @return array
+     */
+    public function getActiveRepositories(): array
+    {
+        return $this->repositoryMap;
     }
 }
